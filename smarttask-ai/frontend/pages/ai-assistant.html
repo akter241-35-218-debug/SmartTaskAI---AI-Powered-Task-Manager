@@ -6,10 +6,32 @@
   <title>SmartTask AI – AI Assistant</title>
   <link rel="stylesheet" href="../css/style.css">
 </head>
-<body>
-  <h1>AI Assistant</h1>
-  <!-- TODO Member 2 -->
+<body data-page="ai" data-protected="true">
+  <div id="navbar"></div>
+  <main class="container">
+    <h1>AI Assistant</h1>
+    <p class="subtitle">Task likho, AI priority ar suggestion bole dibe</p>
+
+    <div class="card">
+      <h2>Task Priority &amp; Suggestion</h2>
+      <form id="analyzeForm">
+        <div class="form-group"><label for="text">Your task</label>
+          <textarea id="text" name="text" placeholder="e.g. Complete Java Assignment Tomorrow" required></textarea></div>
+        <button class="btn" type="submit">Analyze with AI</button>
+      </form>
+      <div class="ai-result" id="aiResult"></div>
+    </div>
+
+    <div class="card">
+      <h2>Daily Productivity Tip</h2>
+      <div class="tip-box" id="tipBox"></div>
+      <button class="btn btn-outline btn-sm" id="nextTip">Next tip</button>
+    </div>
+  </main>
   <script src="../js/config.js"></script>
+  <script src="../js/mock.js"></script>
   <script src="../js/api.js"></script>
+  <script src="../js/common.js"></script>
+  <script src="../js/ai.js"></script>
 </body>
 </html>

@@ -6,10 +6,29 @@
   <title>SmartTask AI – Dashboard</title>
   <link rel="stylesheet" href="../css/style.css">
 </head>
-<body>
-  <h1>Dashboard</h1>
-  <!-- TODO Member 2 -->
+<body data-page="dashboard" data-protected="true">
+  <div id="navbar"></div>
+  <main class="container">
+    <h1>Dashboard</h1>
+    <p class="subtitle">Tomar task-er overview</p>
+    <div class="stats-grid">
+      <div class="stat-card"><div class="label">Total Tasks</div><div class="value" id="statTotal">0</div></div>
+      <div class="stat-card green"><div class="label">Completed Tasks</div><div class="value" id="statCompleted">0</div></div>
+      <div class="stat-card orange"><div class="label">Pending Tasks</div><div class="value" id="statPending">0</div></div>
+      <div class="stat-card red"><div class="label">High Priority Tasks</div><div class="value" id="statHigh">0</div></div>
+    </div>
+    <div class="dashboard-two">
+      <div class="card"><h2>Recent Tasks</h2><div id="recentTasks"></div><a class="btn btn-outline btn-sm" href="tasks.html">View all</a></div>
+      <div class="card"><h2>Quick Actions</h2>
+        <p style="margin-bottom:12px"><a class="btn" href="tasks.html">+ Add New Task</a></p>
+        <p><a class="btn btn-outline" href="ai-assistant.html">Ask AI Assistant</a></p>
+      </div>
+    </div>
+  </main>
   <script src="../js/config.js"></script>
+  <script src="../js/mock.js"></script>
   <script src="../js/api.js"></script>
+  <script src="../js/common.js"></script>
+  <script src="../js/dashboard.js"></script>
 </body>
 </html>
