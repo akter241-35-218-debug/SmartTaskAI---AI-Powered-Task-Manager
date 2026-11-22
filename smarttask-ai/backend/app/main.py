@@ -1,0 +1,21 @@
+from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
+from .routers import auth, tasks, ai
+
+app = FastAPI(title="SmartTask AI")
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # development only
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
+app.include_router(auth.router)
+app.include_router(tasks.router)
+app.include_router(ai.router)
+
+
+@app.get("/")
+def root():
+    return {"message": "SmartTask AI API running"}
