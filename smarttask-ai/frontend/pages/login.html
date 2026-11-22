@@ -6,10 +6,27 @@
   <title>SmartTask AI – Login</title>
   <link rel="stylesheet" href="../css/style.css">
 </head>
-<body>
-  <h1>Login</h1>
-  <!-- TODO Member 2 -->
+<body data-page="login">
+  <div id="navbar"></div>
+  <main class="container">
+    <div class="auth-wrap">
+      <div class="card">
+        <h1>Welcome back</h1>
+        <p class="subtitle">Login to your account</p>
+        <form id="loginForm">
+          <div class="form-group"><label for="email">Email</label><input type="email" id="email" name="email" required></div>
+          <div class="form-group"><label for="password">Password</label><input type="password" id="password" name="password" required></div>
+          <div class="error-text" id="formError"></div>
+          <button class="btn" type="submit" style="width:100%">Login</button>
+        </form>
+        <p class="auth-switch">Account nai? <a href="register.html">Register</a></p>
+      </div>
+    </div>
+  </main>
   <script src="../js/config.js"></script>
+  <script src="../js/mock.js"></script>
   <script src="../js/api.js"></script>
+  <script src="../js/common.js"></script>
+  <script src="../js/auth.js"></script>
 </body>
 </html>
